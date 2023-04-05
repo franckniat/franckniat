@@ -14,10 +14,10 @@
         <div class="navbar">
             <div class="logo"><h1>fn.<i class="bi bi-7-circle"></i></h1></div>
             <ul class="links">
-                <li><a href="#"><i class="bi bi-house"></i> Home</a></li>
-                <li><a href="#"><i class="bi bi-star"></i> Skills</a></li>
-                <li><a href="#"><i class="bi bi-collection"></i> Projects</a></li>
-                <li><a href="#"><i class="bi bi-telephone"></i> Contact</a></li>
+                <li><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li><a href="#skills"><i class="bi bi-star"></i> Skills</a></li>
+                <li><a href="#projects"><i class="bi bi-collection"></i> Projects</a></li>
+                <li><a href="#contact"><i class="bi bi-telephone"></i> Contact</a></li>
             </ul>
             <div class="select_theme" id="dark-select">
                 <a class="action_btn" id="icon_dark"><i class="bi bi-brightness-high"></i></a>
@@ -28,36 +28,31 @@
         </div>
         <div class="dropdown_menu">
             <ul class="links">
-                <li><a href="#"><i class="bi bi-house"></i> Home</a></li>
-                <li><a href="#"><i class="bi bi-star"></i> Skills</a></li>
-                <li><a href="#"><i class="bi bi-collection"></i> Projects</a></li>
-                <li><a href="#"><i class="bi bi-telephone"></i> Contact</a></li>
+                <li><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li><a href="#skills"><i class="bi bi-star"></i> Skills</a></li>
+                <li><a href="#projects"><i class="bi bi-collection"></i> Projects</a></li>
+                <li><a href="#contact"><i class="bi bi-telephone"></i> Contact</a></li>
             </ul>
             <div class="select_theme" id="dark-select">
-                <a class="action_btn" id="icon_dark"><i class="bi bi-moon-stars"></i></a>
+                <a class="action_btn" id="icon_dark"><i class="bi bi-brightness-high"></i></a>
             </div>
         </div>
     </nav>
-    <header> 
-    </header>
-
-    <article>
+    <header>
         <div class="hero">
             <div class="text_hero">
-                <div>
-                <p>
-                    HEY my name is FRANCK NIAT but you can call me  <i>NIATO</i>
+                <p style="text-align: center; font-size: 20px; color: var(--secondary-color);">
+                    HEY my name is <b> FRANCK NIAT </b> but you can call me  <b><i>NIATO</i></b>
                 </p>
-                <p>
-                    i'm a Web Developper, Student in Cameroon and i'm passionate about New Dgital Technologies.
-                </p> <br>
-                <a href="files/MonCV.pdf" target="_blank" class="action_btn">Know more about me <i class="bi bi-arrow-right"></i></a>
-                </div>
+                <p style="text-align: center; color: var(--secondary-color);">
+                    i'm a Web Developper, Student in Cameroon and i'm passionate about New Dgital Technologies. <br><br>
+                    <a href="files/MonCV.pdf" target="_blank" class="action_btn">Know more about me <i class="bi bi-arrow-right"></i></a>
+                </p>
             </div>
-        </div>
-    </article>
+        </div> 
+    </header>
 
-    <section>
+    <section id="skills">
         
         <div class="skills">
             <h1>Skills</h1>
@@ -94,14 +89,6 @@
                     </div>
                     <div class="name">
                         Bootstrap
-                    </div>
-                </div>
-                <div class="language">
-                    <div class="logo">
-                        <img src="img/tailwindcss.png" alt="Web Skill">
-                    </div>
-                    <div class="name">
-                        Tailwind CSS
                     </div>
                 </div>
                 <div class="language">
@@ -191,13 +178,6 @@
                         Docker
                     </div>
                 </div>
-                <div class="language">
-                    <div class="logo">
-                        <img src="img/vmware.svg" alt="mobile skill">
-                    </div>
-                    <div class="name">
-                    </div>
-                </div>
             </div>
 
             <p>Database 📍</p>
@@ -266,15 +246,12 @@
         </div>
     </section>
     <section id="projects">
+        <br><h1>Projects</h1>
         <div class="projects">
-
-            <h1>Projects</h1>
             <div class="project">
-                <div class="image">
-                    <img src="img/project1.png" alt="Project 1">
-                </div>
+                <img src="img/project1.png" alt="Project 1">
                 <div class="name">
-                    Template of Kitchen App : "Cuisinons Camerounais"
+                    <a href="#">Template of Kitchen App : "Cuisinons Camerounais" </a>
                 </div>
                 <div class="description">
                     An application with which you can download recipes and even share you own recipes.
@@ -284,109 +261,74 @@
                 </div>
                 <div class="footer_project">
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> HTML
+                        <i class="bi bi-pin-angle"> HTML</i>
                     </div>
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> CSS
+                        <i class="bi bi-pin-angle"> CSS</i>
                     </div>
                 </div>
             </div>
-            <br>
             <div class="project">
-                <div class="image">
-                    <img src="img/project2.png" alt="Project 1">
-                </div>
+                <img src="img/project2.png" alt="Project 2">
                 <div class="name">
-                    Template of Kitchen App (Update) : "Cuisinons KMER"
+                    <a href="https://github.com/franckniat/CK"> Template of Kitchen App : "Cuisinons KMER" (update)</a>
+                </div>
+                <div class="description">
+                    An application with which you can download recipes and even share you own recipes. (Possibility to chat with master chef)
+                </div>
+                <div class="more_infos">
+                    <a href="#" class="links" style="font-weight:bold;">More infos <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="footer_project">
+                    <div class="tech">
+                        <i class="bi bi-pin-angle"> HTML</i>
+                    </div>
+                    <div class="tech">
+                        <i class="bi bi-pin-angle"> CSS</i>
+                    </div>
+                    <div class="tech">
+                        <i class="bi bi-pin-angle"> Bootstrap</i>
+                    </div>
+                    <div class="tech">
+                        <i class="bi bi-pin-angle"> PHP</i>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/project3.png" alt="Project 3">
+                <div class="name">
+                    <a href="#">Template of Kitchen App : "Cuisinons Camerounais" (update) </a>
                 </div>
                 <div class="description">
                     An application with which you can download recipes and even share you own recipes.
-                    With a possibility to ask assistance of master chefs. <i class="bi bi-star"></i> 
                 </div>
                 <div class="more_infos">
                     <a href="#" class="links" style="font-weight:bold;">More infos <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="footer_project">
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> HTML
+                        <i class="bi bi-pin-angle"> HTML </i>
                     </div>
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> CSS
+                        <i class="bi bi-pin-angle"> CSS </i>
                     </div>
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> JS
+                        <i class="bi bi-pin-angle"> Bootstrap </i>
                     </div>
                     <div class="tech">
-                        <i class="bi bi-pin-angle"></i> BOOTSTRAP
+                        <i class="bi bi-pin-angle"> PHP </i>
                     </div>
                 </div>
             </div>
             <br>
-            <div class="project">
-                <div class="image">
-                    <img src="img/project3.png" alt="Project 3">
-                </div>
-                <div class="name">
-                    Estate Portal  : "Smart-secures"
-                </div>
-                <div class="description">
-                    An application with which you can buy and rent estate; With a possibility of posting sales announcements. <i class="bi bi-star"></i> 
-                </div>
-                <div class="more_infos">
-                    <a href="#" class="links" style="font-weight:bold;">More infos <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="footer_project">
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> HTML
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> CSS
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> PHP
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> BOOTSTRAP
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="project">
-                <div class="image">
-                    <img src="img/project4.png" alt="Project 1">
-                </div>
-                <div class="name">
-                    Update of template : "Numeric Library"
-                </div>
-                <div class="description">
-                    An application with which students can download recipes and even share you own recipes.
-                </div>
-                <div class="more_infos">
-                    <a href="#" class="links" style="font-weight:bold;">More infos <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="footer_project">
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> HTML
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> CSS
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> PHP
-                    </div>
-                    <div class="tech">
-                        <i class="bi bi-pin-angle"></i> BOOTSTRAP
-                    </div>
-                </div>
-            </div>
         </div>
+        <br><br>
     </section>
 
     <section id="contact">
         <div class="contact">
             <div class="info">
-                <div class="img"><img src="img/info.webp" alt="#"></div>
+                <div class="img"><img src="img/header_bg.png" alt="#"></div>
                 <h2>#OPENTOWORK <i class="bi bi-briefcase"></i></h2>
                 <p style="margin-bottom: 0;">I'm available for freelance or full-time position. Contact me and let‘s talk.😉</p>
                 <p>My social networks  <i class="bi bi-arrow-down"></i></p>
