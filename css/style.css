@@ -46,7 +46,6 @@
     font-family: 'Century Gothic', sans-serif;
 }
 body{
-    height: 100vh;
     background: var(--primary-color);
 }
 
