@@ -42,7 +42,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Century Gothic', sans-serif;
 }
 body{
@@ -213,7 +212,6 @@ header{
 }
 
 section{
-    max-width: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -245,8 +243,6 @@ section .skills p{
 }
 
 .language{
-    animation: fadeIn 0.5s;
-    animation: slideIn 1s;
     display: flex;
     border: solid 0.3px #d9d9d9;
     border-radius: 10px;
@@ -288,7 +284,6 @@ section .skills p{
 }
 
 section .projects{
-    gap: 2px;
     text-align: center;
     height: auto;
 }
@@ -501,19 +496,16 @@ form label{
 
 @media(max-width: 850px){
     .hero{
-       margin-top: 80px;
+       margin-top: 100px;
        display: flex;
        justify-content: center; 
     }
     header{
-        background-image: url(../img/domino.), url(../img/header_bg.png);
-        background-repeat: no-repeat, no-repeat;
-        background-attachment: fixed, fixed;
-        background-position: left, center;
-        background-size: 500px, 500px;
-        position: relative;
-        height: 650px;
-        padding: 0.2rem;
+        background-image: url(../img/header_bg.png);
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-position:center;
+        background-size: cover;
     }
     
 }
@@ -536,6 +528,21 @@ form label{
     .dropdown_menu{
         left: 2rem;
         width: unset;
+    }
+}
+
+@media(max-width:650px){
+    .language{
+        display: flex;
+        border: solid 0.3px #d9d9d9;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+        justify-content: center;
+        box-shadow: 3px 3px 3px gray;
+        gap:2rem;
+    }
+    section{
+        margin-right: 0;
     }
 }
 
