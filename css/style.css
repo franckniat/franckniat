@@ -1,0 +1,542 @@
+:root{
+    --primary-color : #fff;
+    --secondary-color : #1e1e1e;
+    --background-color-box-light:#fff;
+    --background-color-box-dark:rgb(60, 59, 59);
+    --navbar-bg-color: rgba(255, 255, 255, 0.5);
+    --input-bg-color: #fff;
+    --main-color:#0d6efd;
+}
+
+@keyframes fadeIn{
+    0% { opacity: 0;
+        margin-left: 0;
+    }
+  100% { opacity: 1; 
+    }
+}
+
+.light_theme{
+    --primary-color : #fff;
+    --secondary-color : #1e1e1e;
+    --background-color-box-light: #fff;
+}
+
+.dark_theme{
+    --primary-color : #1e1e1e;
+    --secondary-color : #fff;
+    --background-color-box-light: rgb(60, 59, 59);
+    --input-bg-color:rgb(83, 81, 81);
+    --navbar-bg-color: rgba(140, 140, 140, 0.5);
+}
+
+#icon_dark i.black{
+    color: var(--secondary-color);
+}
+
+#icon_dark i.white{
+    color: var(--primary-color);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+}
+body{
+    height: 100vh;
+    background: var(--primary-color);
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a:hover{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0d6efd;
+}
+
+header{
+    background-image: url(../img/domino.png), url(../img/header_bg.png);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: left, right;
+    background-size: 200px, 500px;
+    position: relative;
+    height: 650px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar.sticky{
+    background-color: var(--navbar-bg-color);
+    backdrop-filter: blur(15px);
+    position: fixed;
+}
+
+.navbar .logo h1{
+    margin-left: 15px;
+    color: var(--secondary-color);
+}
+
+.navbar .links{
+    display: flex;
+    gap:2rem;
+}
+.navbar .links a{
+    font-weight: bold;
+}
+
+.navbar .select_theme{
+    margin-right: 15px;
+    border-radius: 20px;
+}
+
+.navbar .select_theme a{
+    color: var(--primary-color);
+}
+
+.navbar .action_btn i{
+    color: var(--primary-color);
+}
+
+.navbar .toggle_btn{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 15px;
+}
+
+.action_btn{
+    background-color: var(--main-color);
+    color: #fff;
+    padding:0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    transform : scale 1.2;
+    color: #fff;
+    box-shadow: rgba(255, 255, 255, 1.5);
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    margin-top: 60px;
+    padding: 1.5rem;
+    width: 300px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .select_theme{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.dropdown_menu .select_theme a{
+    color: var(--primary-color);
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu.open{
+    display: block;
+    height: auto;
+    position: fixed;
+}
+
+.hero{
+    float: left;
+    margin-top: 130px;
+    margin-left: 25px;
+    width: 700px;
+    text-align: center;
+}
+
+.hero .text_hero h3{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 30px;
+    color: var(--secondary-color);
+
+}
+
+.hero .text_hero h1, .hero .text_hero .more_infos{
+    color: var(--secondary-color);
+}
+
+.hero .text_hero .action_btn{
+    margin-top: 10px;
+}
+
+section{
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+section .skills{
+    display:block;
+}
+
+section .skills h1{
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+section .skills p{
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.languages{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+}
+
+.language{
+    animation: fadeIn 0.5s;
+    animation: slideIn 1s;
+    display: flex;
+    border: solid 0.3px #d9d9d9;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    box-shadow: 3px 3px 3px gray;
+    gap:2rem;
+}
+
+.language:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 8px 8px 8px gray;
+}
+
+.language .name{
+    color: var(--secondary-color);
+}
+
+
+.language .logo img{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.language .name{
+    margin-right: 15px;
+    height: auto;
+    margin-top: 30px;
+}
+
+#projects{
+    background-image: url(../img/section2_bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section .projects{
+    gap: 2px;
+    text-align: center;
+    height: auto;
+}
+
+section .projects h1{
+    color: var(--primary-color);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+section .projects .project .name{
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+section .projects .project .description{
+    width: auto;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+
+section .projects .project .footer_project{
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+section .projects .project .more_infos{
+    margin-top: 15px;
+    justify-content: start;
+}
+
+section .projects .project .footer_project .tech{
+    color: var(--secondary-color);
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+section .projects .project .footer_project .tech:hover{
+    opacity: 90%;
+}
+
+section .projects .project{
+    border: solid 0.3px grey;
+    position: inherit;
+    background-color: var(--background-color-box-light);
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px var(--shadow-color);
+    gap: 2px;
+    height: auto;
+}
+
+section .projects .project img{
+    height: 500px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+section .contact{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section .contact .info h2, section .contact .info p{
+    color: var(--secondary-color);
+}
+
+section .contact .info{
+    min-width: 500px;
+    background-color: var(--background-color-box-light);
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px gray;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 40px 0;
+}
+
+section .contact .info .img{
+    height: 300px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section .contact .info h2, section .contact .info p{
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section .contact .info .social{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section .contact .info .social a{
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+section .contact .info .social a i{
+    height: 100px;
+}
+
+section .contact form{
+    width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: var(--background-color-box-light);
+    box-shadow: 5px 5px 5px gray;
+}
+
+section .contact form .first_data{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+section .contact form .first_data .text_input{
+    width: 215px;
+}
+
+section .contact form .other_data{
+    display: flex;
+    justify-content: center;
+
+}
+section .contact form .other_data .text_input, #send_message{
+    width: 450px;
+}
+section .contact form .other_data .form_block{
+    display: block;
+}
+
+textarea{
+    background-color: var(--input-bg-color);
+}
+
+section .contact form .text_input{
+    height: 50px;
+    margin: 8px 0;
+    width: 200px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 15px;
+    background-color: var(--input-bg-color);
+    border: groove 0.5px var(--secondary-color);
+}
+
+form label{
+    color: var(--secondary-color);
+}
+
+#send_message{
+    margin: 8px 0;
+    padding: 5px;
+    border-radius: 15px ;
+    border: groove 0.5px var(--secondary-color);
+}
+
+#send_btn{
+    display: flex;
+    justify-content: center;
+}
+#send_btn button{
+    margin-top: 15px;
+    cursor: pointer;
+}
+@media(max-width: 1045px){
+    .hero{
+       margin-top: 150px;
+       width: 600px;
+       display: flex;
+       justify-content: center; 
+    }
+    
+}
+@media(max-width: 917px){
+    .hero{
+       margin-top: 105px;
+       width: 600px;
+       display: flex;
+       justify-content: center; 
+    }
+    
+}
+
+@media(max-width: 850px){
+    .hero{
+       margin-top: 80px;
+       display: flex;
+       justify-content: center; 
+    }
+    header{
+        background-image: url(../img/domino.), url(../img/header_bg.png);
+        background-repeat: no-repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: left, center;
+        background-size: 500px, 500px;
+        position: relative;
+        height: 650px;
+        padding: 0.2rem;
+    }
+    
+}
+
+@media(max-width: 800px){
+    .navbar .links, 
+    .navbar .action_btn,
+    .navbar .select_theme{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: none;
+    }
+}
+
+@media(max-width:560px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
