@@ -3,7 +3,7 @@
     --secondary-color : #1e1e1e;
     --background-color-box-light:#fff;
     --background-color-box-dark:rgb(60, 59, 59);
-    --navbar-bg-color: rgba(255, 255, 255, 0.5);
+    --navbar-bg-color: rgba(153, 153, 153, 0.508);
     --input-bg-color: #fff;
     --main-color:#0d6efd;
 }
@@ -42,10 +42,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Lucida Sans';
+    font-family: 'Rockwell';
 }
 body{
     background: var(--primary-color);
+    width: 100%;
+    height: 100%;
 }
 
 a{
@@ -66,17 +68,20 @@ a:hover{
 
 
 
-header{
+.header{
     background-image:  url(../img/domino.png), url(../img/domino.png), url(../img/domino.png);
     background-repeat:  no-repeat, no-repeat, no-repeat;
     background-attachment: fixed, fixed, fixed;
     background-position: left, center, right;
     background-size: 200px, 200px, 200px;
     height: 300px;
-    width: 100%;
 }
 
-header .hero{
+.profile_picture{
+    display: none;
+}
+
+.header .hero{
     margin-top: 150px;
 }
 
@@ -89,8 +94,8 @@ header .hero{
     right: 0;
     width: 100%;
     height: 80px;
-    margin: 0 auto;
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
 }
@@ -99,6 +104,7 @@ header .hero{
     background-color: var(--navbar-bg-color);
     backdrop-filter: blur(35px);
     position: fixed;
+    box-shadow: 2.5px 2.5px 2.5px rgba(55, 55, 55, 0.934);
 }
 
 .navbar .logo h1{
@@ -154,16 +160,16 @@ header .hero{
 .dropdown_menu{
     display: none;
     position: absolute;
+    top : 85px;
     right: 2rem;
-    margin-top: 60px;
     padding: 1.5rem;
     width: 300px;
     height: 0;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(153, 153, 153, 0.508);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu li{
@@ -181,38 +187,37 @@ header .hero{
 
 .dropdown_menu .select_theme a{
     color: var(--primary-color);
-}
-
-.dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
 }
 
 .dropdown_menu.open{
+    animation: fadeIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: block;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(153, 153, 153, 0.508);
     height: auto;
     position: fixed;
 }
 
-
-
-section{
-    margin-bottom: 30px;
+.br{
+    display: none;
 }
 
-section .skills{
+main{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+main .skills{
     display:block;
     margin-top: 30px;
 }
 
-section .skills h1{
+main .skills h1{
     margin-bottom: 15px;
     color: var(--secondary-color);
     text-align: center;
 }
-section .skills p{
+main .skills p{
     color: var(--secondary-color);
     text-align: center;
     font-weight: bold;
@@ -266,6 +271,8 @@ section .skills p{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: block;
+    margin: 0;
 }
 
 #projects .projects{
@@ -313,8 +320,13 @@ section .skills p{
     margin-bottom: 10px;
 }
 
+#projects .projects .project .more_infos i:hover{
+    margin-left: 5px;
+}
+
 #projects .projects .project .footer_project{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -337,18 +349,18 @@ section .skills p{
     color: var(--secondary-color);
 }
 
-section .contact{
+main .contact{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-section .contact .info h2, section .contact .info p{
+main .contact .info h2, section .contact .info p{
     color: var(--secondary-color);
 }
 
-section .contact .info{
+main .contact .info{
     min-width: 500px;
     background-color: var(--background-color-box-light);
     width: 500px;
@@ -360,7 +372,7 @@ section .contact .info{
     padding: 40px 0;
 }
 
-section .contact .info .img{
+main .contact .info .img{
     height: 300px;
     display: flex;
     border-radius: 10px;
@@ -369,31 +381,33 @@ section .contact .info .img{
     margin-bottom: 10px;
 }
 
-section .contact .info h2, section .contact .info p{
+main .contact .info h2, main .contact .info p{
     color: var(--secondary-color);
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
-section .contact .info .social{
+main .contact .info .social{
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-section .contact .info .social a{
+main .contact .info .social a{
     padding: 10px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px gray;
 }
 
-section .contact .info .social a i{
+main .contact .info .social a i{
     height: 100px;
 }
 
-section .contact form{
+main .contact form{
     width: 500px;
     padding: 40px;
     border-radius: 15px;
@@ -401,24 +415,24 @@ section .contact form{
     box-shadow: 5px 5px 5px gray;
 }
 
-section .contact form .first_data{
+main .contact form .first_data{
     display: flex;
     gap: 15px;
     justify-content: center;
 }
-section .contact form .first_data .text_input{
+main .contact form .first_data .text_input{
     width: 215px;
 }
 
-section .contact form .other_data{
+main .contact form .other_data{
     display: flex;
     justify-content: center;
 
 }
-section .contact form .other_data .text_input, #send_message{
+main .contact form .other_data .text_input, #send_message{
     width: 450px;
 }
-section .contact form .other_data .form_block{
+main .contact form .other_data .form_block{
     display: block;
 }
 
@@ -426,7 +440,7 @@ textarea{
     background-color: var(--input-bg-color);
 }
 
-section .contact form .text_input{
+main .contact form .text_input{
     height: 50px;
     margin: 8px 0;
     width: 200px;
@@ -457,7 +471,7 @@ form label{
     margin-top: 15px;
     cursor: pointer;
 }
-@media(max-width: 1045px){
+@media(max-width: 500px){
     .hero{
        margin-top: 150px;
        width: 600px;
@@ -466,23 +480,14 @@ form label{
     }
     
 }
-@media(max-width: 917px){
-    .hero{
-    }
+@media(max-width: 300px){
+    
     
 }
 
 @media(max-width: 850px){
-    .hero{
-    }
-    header .hero .text_hero{
-        margin-top: -80px;
-    }
-    nav{
-        margin-bottom: 0;
-    }
-    header{
-        background-image: url(../img/header_bg.png);
+    .header{
+        background-image: url(../img/domino.png);
         background-repeat: no-repeat;
         background-attachment:fixed;
         background-position:center;
@@ -514,17 +519,57 @@ form label{
 }
 
 @media(max-width:650px){
-    .language{
-        display: flex;
-        border: solid 0.3px #d9d9d9;
-        border-radius: 10px;
-        background-color: var(--primary-color);
-        justify-content: center;
-        box-shadow: 3px 3px 3px gray;
-        gap:2rem;
+    main{
+        margin-right: 20px;
+        margin-left: 20px;
     }
-    section{
-        margin-right: 0;
+}
+
+@media(max-width:450px){
+    .hero .text_hero{
+        width: 500px;
+    }
+
+    .header{
+        width: 600px;
+        background-size: 100px, 100px, 100px;
+        background-position: center;
+    }
+    .skills{
+        top: 80px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+    }
+    #projects{
+        width: 600px;
+    }
+    #contact{
+        width: 600px;
+    }
+
+    .profile_picture{
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+
+    }
+    
+    .profile_picture img{
+        height: 200px;
+
+    }
+    .hero{
+        display: grid;
+        justify-content: center;
+    }
+    .header .hero{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .br{
+        display: block;
+        margin-top: 150px;
     }
 }
 
