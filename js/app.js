@@ -9,7 +9,7 @@ toggleBtn.onclick = function(){
 
     toggleBtnIcon.classList = isOpen
     ?'bi bi-x-lg'
-    :'bi bi-justify'
+    :'bi bi-list'
 }
 
 window.addEventListener("scroll", function(){
@@ -17,14 +17,31 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0)
 })
 
-const icon_dark = document.querySelector('#icon_dark')
-const icon_light = document.querySelector('#icon_light')
+const icon_dark = document.querySelector('.icon_dark')
+const dropdown_menu_switch_theme = document.querySelector('.dropdown_menu .select_theme .icon_dark')
 
     icon_dark.onclick = function(){
         document.body.classList.toggle('dark_theme')
 
         const isDark = document.body.classList.contains('dark_theme')
-        const toggleBtnDark = document.querySelector('#icon_dark i')
+        const toggleBtnDark = document.querySelector('.icon_dark i')
+
+        if(isDark){
+            toggleBtnDark.classList = isDark
+            ?'black' + 'bi bi-moon-stars'
+            :'bi bi-brightness-high' + 'white'
+        }else{
+            toggleBtnDark.classList = isDark
+            ?'white bi bi-moon-stars'
+            :'black bi bi-brightness-high'
+        }
+    }
+
+    dropdown_menu_switch_theme.onclick = function(){
+        document.body.classList.toggle('dark_theme')
+
+        const isDark = document.body.classList.contains('dark_theme')
+        const toggleBtnDark = document.querySelector('.dropdown_menu .select_theme .icon_dark i')
 
         if(isDark){
             toggleBtnDark.classList = isDark
