@@ -38,9 +38,9 @@ I enjoy solving problems, learning new technologies, and creating products that 
 
 You can find me on:
 
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/fndev)
-- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/fn.dev)
-- [![Twitter / X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://twitter.com/fndev_)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/franck-niat)
+- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/itsniatfranck)
+- [![Twitter / X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://twitter.com/manuel_niat)
 
 
 ⚡ *“Create, learn, and share — every line of code is an opportunity.”*
