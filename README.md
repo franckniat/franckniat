@@ -43,6 +43,4 @@ You can find me on:
 - [![Twitter / X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://twitter.com/manuel_niat)
 
 
-⚡ *“Create, learn, and share — every line of code is an opportunity.”*
-
 
